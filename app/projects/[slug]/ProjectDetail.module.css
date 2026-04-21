@@ -1,0 +1,136 @@
+.container {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  background: transparent;
+  color: #fff;
+  z-index: 1;
+}
+
+.contentWrapper {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 10rem 2rem 5rem 2rem;
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.navigationRow {
+  width: 100%;
+}
+
+.backButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #94a3b8;
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  padding: 0.5rem 1rem 0.5rem 0;
+}
+
+.backButton:hover {
+  color: #0ea5e9;
+  transform: translateX(-5px);
+}
+
+.backIcon {
+  width: 20px;
+  height: 20px;
+}
+
+.heroLayout {
+  display: flex;
+  gap: 6rem;
+  align-items: center;
+}
+
+.textContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.subtitle {
+  color: #0ea5e9;
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0 0 1rem 0;
+}
+
+.title {
+  font-size: 4.5rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin: 0 0 2rem 0;
+}
+
+.divider {
+  width: 60px;
+  height: 4px;
+  background: #334155;
+  margin-bottom: 3rem;
+  border-radius: 2px;
+}
+
+.descriptionText {
+  color: #cbd5e1;
+  font-size: 1.35rem;
+  line-height: 1.8;
+  font-weight: 400;
+  margin: 0;
+}
+
+.imageColumn {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.imageFrame {
+  width: 100%;
+  max-width: 550px;
+  aspect-ratio: 4/5;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.6), inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+  background: radial-gradient(circle at center, #1e293b 0%, #0f172a 100%);
+}
+
+.projectImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 1024px) {
+  .heroLayout {
+    flex-direction: column;
+    gap: 4rem;
+  }
+  
+  .imageColumn {
+    width: 100%;
+    order: -1;
+  }
+
+  .imageFrame {
+    max-width: 100%;
+    aspect-ratio: 16/9;
+  }
+
+  .title {
+    font-size: 3rem;
+  }
+
+  .descriptionText {
+    font-size: 1.1rem;
+  }
+}

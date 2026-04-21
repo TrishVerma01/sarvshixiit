@@ -1,0 +1,37 @@
+.container {
+  background-color: #0b1220;
+  width: 100vw;
+  min-height: 100vh;
+  height: auto;
+  overflow-x: clip; /* clip safely hides overflow without breaking position: sticky in descentants */
+  overflow-y: auto;
+  position: relative;
+}
+
+.heroFold {
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.systemBootingOrb {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30vh;
+  height: 30vh;
+  border-radius: 50%;
+  background: radial-gradient(circle at center, rgba(14, 165, 233, 0.8) 0%, rgba(14, 165, 233, 0.2) 40%, transparent 70%);
+  animation: breatheOrb 2s infinite ease-in-out;
+  z-index: 5;
+}
+
+@keyframes breatheOrb {
+  0% { transform: translate(-50%, -50%) scale(0.8); opacity: 0.5; }
+  50% { transform: translate(-50%, -50%) scale(1.2); opacity: 1; }
+  100% { transform: translate(-50%, -50%) scale(0.8); opacity: 0.5; }
+}
