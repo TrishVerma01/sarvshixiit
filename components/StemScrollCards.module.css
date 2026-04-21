@@ -1,0 +1,281 @@
+.section {
+  position: relative;
+  z-index: 10;
+  min-height: 420vh;
+  width: 100%;
+  padding: 0 2rem;
+}
+
+.stickyFrame {
+  position: sticky;
+  top: 0;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: minmax(260px, 0.82fr) minmax(320px, 1.18fr);
+  grid-template-rows: 1fr auto;
+  gap: 2rem 4rem;
+  align-items: center;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 5rem 0 3rem;
+}
+
+.intro {
+  align-self: center;
+}
+
+.eyebrow {
+  display: inline-flex;
+  color: #9eecc7;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  margin-bottom: 1.1rem;
+}
+
+.intro h2 {
+  color: #ffffff;
+  font-size: clamp(2.35rem, 4.2rem, 4.2rem);
+  line-height: 1.02;
+  margin: 0 0 1.4rem;
+  max-width: 560px;
+}
+
+.intro p {
+  color: #c7d2ce;
+  font-size: 1.08rem;
+  line-height: 1.7;
+  max-width: 520px;
+  margin: 0;
+}
+
+.progressShell {
+  width: min(420px, 100%);
+  height: 3px;
+  margin-top: 2.2rem;
+  background: rgba(255, 255, 255, 0.12);
+  overflow: hidden;
+  transform-origin: left center;
+}
+
+.progressShell span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #9eecc7, #7cc7ff, #ffd166);
+  transform-origin: left center;
+}
+
+.stackWrap {
+  position: relative;
+  min-height: 620px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.orbitVisual {
+  position: absolute;
+  inset: 4% auto auto 1%;
+  width: min(310px, 50%);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  overflow: hidden;
+  opacity: 0.36;
+  filter: saturate(1.2) contrast(1.05);
+  transform: rotate(-8deg);
+}
+
+.orbitVisual::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 38% 34%, transparent 0 26%, rgba(11, 18, 32, 0.18) 52%, rgba(11, 18, 32, 0.92) 100%);
+}
+
+.orbitVisual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cardsStack {
+  position: relative;
+  width: min(620px, 100%);
+  height: 520px;
+}
+
+.card {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 500px;
+  padding: 2rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background:
+    linear-gradient(145deg, rgba(18, 24, 35, 0.94), rgba(12, 16, 25, 0.92)),
+    radial-gradient(circle at top right, var(--card-glow), transparent 44%);
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.46);
+  overflow: hidden;
+  transform-origin: center bottom;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-top: 4px solid var(--card-line);
+  pointer-events: none;
+}
+
+.green {
+  --card-line: #66e3a2;
+  --card-glow: rgba(102, 227, 162, 0.18);
+}
+
+.blue {
+  --card-line: #73c7ff;
+  --card-glow: rgba(115, 199, 255, 0.18);
+}
+
+.rose {
+  --card-line: #ff8da1;
+  --card-glow: rgba(255, 141, 161, 0.18);
+}
+
+.gold {
+  --card-line: #ffd166;
+  --card-glow: rgba(255, 209, 102, 0.18);
+}
+
+.cardTopline,
+.cardFooter {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  color: var(--card-line);
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.card h3 {
+  color: #ffffff;
+  font-size: clamp(2rem, 3rem, 3rem);
+  line-height: 1.08;
+  margin: 2.6rem 0 1.2rem;
+  max-width: 520px;
+}
+
+.card p {
+  color: #d8e1de;
+  font-size: 1.06rem;
+  line-height: 1.72;
+  margin: 0;
+}
+
+.cardFooter {
+  margin-top: auto;
+  padding-top: 2rem;
+}
+
+.principles {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.principle {
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+  padding-top: 1rem;
+}
+
+.principle span {
+  display: block;
+  color: #ffd166;
+  font-size: 0.85rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.principle p {
+  color: #eef3f1;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 980px) {
+  .section {
+    min-height: auto;
+    padding: 5rem 1.25rem;
+  }
+
+  .stickyFrame {
+    position: relative;
+    min-height: auto;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 0;
+  }
+
+  .intro h2 {
+    font-size: 2.8rem;
+  }
+
+  .stackWrap {
+    min-height: auto;
+  }
+
+  .orbitVisual {
+    width: 220px;
+    opacity: 0.28;
+  }
+
+  .cardsStack {
+    height: auto;
+    display: grid;
+    gap: 1rem;
+  }
+
+  .card {
+    position: relative;
+    min-height: auto;
+    transform: none !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .section {
+    padding-inline: 1rem;
+  }
+
+  .intro h2 {
+    font-size: 2.25rem;
+  }
+
+  .intro p,
+  .card p,
+  .principle p {
+    font-size: 0.98rem;
+  }
+
+  .card {
+    padding: 1.35rem;
+  }
+
+  .card h3 {
+    font-size: 1.75rem;
+  }
+
+  .principles {
+    grid-template-columns: 1fr;
+  }
+}
