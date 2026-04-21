@@ -21,7 +21,7 @@ const mentorsData = [
   },
   {
     id: "anurag-pandey",
-    name: "Anurag Pandey",
+    name: "Prof. Anurag Pandey",
     role: "Senior Project Engineer . Deptt of CSE",
     shortBio: "Research Establishment Officer (DORD), IIT Kanpur",
     tags: ["DORD", "Execution", "IITK"],
